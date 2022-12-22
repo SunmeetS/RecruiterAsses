@@ -11,7 +11,7 @@ export const Card = ({ identifier, data }) => {
         setIsVisible(false)
         setTimeout(async () => {
             await axios.delete(process.env.REACT_APP_BASE_URL + 'recruiter/delete-recruiter-flow-data/' + identifier)
-            window.location.reload()
+            // window.location.reload()
         }, 1000);
     }
     return (
