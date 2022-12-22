@@ -5,3 +5,5 @@
 #### Adding and Deleting the cards, Both will be done using different CSS Transition and Animations
 
 ### Check Backend Code Here: https://github.com/SunmeetS/wisdom-circle-nest
+### Live Link : https://recruiterflow.netlify.app/
+### Live Backend Link : https://nest-mongo-backend.vercel.app/
