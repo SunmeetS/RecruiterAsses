@@ -12,7 +12,7 @@ export const Card = ({ identifier, data }) => {
         setTimeout(async () => {
             await axios.delete(process.env.REACT_APP_BASE_URL + 'recruiter/delete-recruiter-flow-data/' + identifier)
             window.location.reload()
-        }, 1000);
+        }, 200);
     }
     return (
         <div className='card animated bounce' style={{
