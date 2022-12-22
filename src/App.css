@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+.card {
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+  border: 2px solid grey;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  margin: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  transition: all 0.2s;
+  color: white;
+  font-size: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.animated {
+  background-repeat: no-repeat;
+  background-position: -200px 0px;
+  /* -webkit-animation-duration: 4s; */
+  animation-duration: 2.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translate(-200px, 200px);
+  }
+
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translate(0);
+  }
+
+  40% {
+    -webkit-transform: translate(-15px, -15px);
+  }
+
+  60% {
+    -webkit-transform: translate(-5px, -5px);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes bounce {
+  0% {
+    -webkit-transform: translate(-200px, -200px);
+  }
+
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translate(0);
+  }
+
+  40% {
+    -webkit-transform: translate(-15px, -15px);
+  }
+
+  60% {
+    -webkit-transform: translate(-10px, -10px);
+  }
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+
+.delete-button {
+  background: #e50101;
+  color: white;
+  width: fit-content;
+  transition: all 0.3s
+}
+
+button {
+  border-radius: 0.5rem;
+  margin: 5px;
+  padding: 7.5px 5px;
+  cursor: pointer;
+}
+
+q .card {
+  width: 150px;
+}
+
+.mainContainer {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  transition: 0.3s all;
+  height: 100vh;
+  flex-direction: column;
+}
+
+body {
+  background-image: url('https://images.unsplash.com/photo-1510987836583-e3fb9586c7b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMGFlc3RoZXRpY3xlbnwwfHwwfHw%3D&w=1000&q=80');
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.delete-button:hover {
+  background-color: #c70000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#add-button {
+  background-color: green;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card img {
+  width: 100%;
 }
